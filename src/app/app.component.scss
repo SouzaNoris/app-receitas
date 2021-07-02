@@ -1,0 +1,70 @@
+.body {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "aside main main"
+        "footer footer footer";
+    grid-gap: 1rem;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto 82vh auto;
+
+    .o-header {
+        grid-area: header;
+        padding: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .input-search > .input-group {
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            .search-btn {
+                content: url(../assets/img/search-solid.svg);
+                width: 1.3rem;
+                position: absolute;
+                right: 1rem;
+            }
+
+            input {
+                width: 220px;
+                border-radius: 2rem;
+                outline: none;
+                border: none;
+                padding: 1rem;
+            }
+        }
+
+        .send-receita {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            span.paper {
+                content: url(../assets/img/file-alt-solid.svg);
+                width: 30px;
+                padding: .5rem;
+            }
+        }
+    }
+    
+    .o-aside {
+        grid-area: aside;
+    }
+
+    .o-main {
+        grid-area: main;
+    }
+
+    .o-footer {
+        grid-area: footer;
+        padding: 1rem;
+        background: #da6900;
+    }
+    
+    .o-header {
+        background: #da6900;
+        color: #FDFDFD;
+      }
+}
